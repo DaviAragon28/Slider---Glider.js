@@ -20,9 +20,12 @@ main .section-bio .info {
 
 
 .section-bio .info > img {
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    min-width: 150px;
+    max-height: 300px;
+    min-height: 150px;
     object-fit: cover;
+    margin: 0 auto
 }
 
 
@@ -76,5 +79,21 @@ main .section-bio .info {
 
 
 
+@media (max-width: 1024px) {
 
+    main .section-bio .info {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info div  {
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .info div p:nth-child(3) {
+        display: none;
+    }
+    
+}
 
